@@ -16,7 +16,6 @@ export default class Main {
 	}
 
 	async render() {
-		// ... ваш код
 		this.renderCarousel();
 		this.renderRibbon();
 		this.renderStepSlider();

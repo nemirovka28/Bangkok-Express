@@ -13,14 +13,14 @@ export default class RibbonMenu {
 		this.elem = createElement(`
 		<div class="ribbon">
 			<button class="ribbon__arrow ribbon__arrow_left ribbon__arrow_visible ">
-				<img src="./assets/images/icons/angle-icon.svg" alt="icon">
+				<img src="../../assets/images/icons/angle-icon.svg" alt="icon">
 			</button>
 
 			<nav class="ribbon__inner">
 			</nav>
 
 			<button class="ribbon__arrow ribbon__arrow_right ribbon__arrow_visible">
-				<img src="./assets/images/icons/angle-icon.svg" alt="icon">
+				<img src="../../assets/images/icons/angle-icon.svg" alt="icon">
 			</button>
 		</div>
 
@@ -103,7 +103,7 @@ export default class RibbonMenu {
 		}
 
 		let scrollRight = this.scrollRight();
-		scrollRight = scrollRight < 1 ? 0 : scrollRight; // Это нужно для ситуации, когда скролл произошел с погрешностью
+		scrollRight = scrollRight < 1 ? 0 : scrollRight; 
 		if (scrollRight > 0) {
 			this.sub('arrow_right').classList.add('ribbon__arrow_visible');
 		} else {

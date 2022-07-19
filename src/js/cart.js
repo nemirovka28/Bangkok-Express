@@ -89,12 +89,12 @@ export default class Cart {
 		return createElement(`<form class="cart-form">
       <h5 class="cart-form__title">Delivery</h5>
       <div class="cart-form__group cart-form__group_row">
-        <input name="name" type="text" class="cart-form__input" placeholder="Name" required value="Santa Claus">
-        <input name="email" type="email" class="cart-form__input" placeholder="Email" required value="john@gmail.com">
+        <input name="name" type="text" class="cart-form__input" placeholder="Name" required value="Alex">
+        <input name="email" type="email" class="cart-form__input" placeholder="Email" required value="cnemirovka@gmail.com">
         <input name="tel" type="tel" class="cart-form__input" placeholder="Phone" required value="+1234567">
       </div>
       <div class="cart-form__group">
-        <input name="address" type="text" class="cart-form__input" placeholder="Address" required value="North, Lapland, Snow Home">
+        <input name="address" type="text" class="cart-form__input" placeholder="Address" required value="ukrain">
       </div>
       <div class="cart-buttons">
         <div class="cart-buttons__buttons btn-group">
@@ -111,7 +111,7 @@ export default class Cart {
 	}
 
 	renderModal() {
-		// ...ваш код
+
 		this.modal = new Modal();
 
 		this.modal.setTitle("Your order");
@@ -130,7 +130,6 @@ export default class Cart {
 
 		this.modal.setBody(this.modalBody);
 
-		// when modal is closed, we forget about it, don't update it any more
 		this.modal.elem.addEventListener('modal-close', () => {
 			this.modal = null;
 			this.modalBody = null;
@@ -199,7 +198,7 @@ export default class Cart {
 			 <p>
 				Order successful! Your order is being cooked :) <br>
 				We’ll notify you about delivery time shortly.<br>
-				<img src="./assets/images/delivery.gif">
+				<img src="../../assets/images/delivery.gif">
 			 </p>
 		  </div>
 		  `;
