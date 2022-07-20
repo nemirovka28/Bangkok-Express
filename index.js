@@ -105,3 +105,7 @@ export default class Main {
 		return products;
 	}
 }
+let main = new Main();
+
+main.render()
+	.then(() => console.log('Страница готова!'));
