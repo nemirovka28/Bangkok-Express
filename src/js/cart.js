@@ -4,7 +4,7 @@ import escapeHtml from '../../assets/lib/escape-html.js';
 import Modal from './modal.js';
 
 export default class Cart {
-	cartItems = []; // [product: {...}, count: N]
+	cartItems = []; 
 
 	constructor(cartIcon) {
 		this.cartIcon = cartIcon;
@@ -13,7 +13,6 @@ export default class Cart {
 	}
 
 	addProduct(product) {
-		// СКОПИРУЙТЕ СЮДЯ СВОЙ КОД
 		let cartItem = this.cartItems.find(
 			item => item.product.id == product.id
 		);
@@ -31,7 +30,6 @@ export default class Cart {
 	}
 
 	updateProductCount(productId, amount) {
-		// СКОПИРУЙТЕ СЮДЯ СВОЙ КОД
 		let cartItem = this.cartItems.find(item => item.product.id == productId);
 		cartItem.count += amount;
 
@@ -43,17 +41,14 @@ export default class Cart {
 	}
 
 	isEmpty() {
-		// СКОПИРУЙТЕ СЮДЯ СВОЙ КОД
 		return this.cartItems.length === 0;
 	}
 
 	getTotalCount() {
-		// СКОПИРУЙТЕ СЮДЯ СВОЙ КОД
 		return this.cartItems.reduce((sum, item) => sum + item.count, 0);
 	}
 
 	getTotalPrice() {
-		// СКОПИРУЙТЕ СЮДЯ СВОЙ КОД
 		return this.cartItems.reduce(
 			(sum, item) => sum + item.product.price * item.count,
 			0
@@ -198,7 +193,7 @@ export default class Cart {
 			 <p>
 				Order successful! Your order is being cooked :) <br>
 				We’ll notify you about delivery time shortly.<br>
-				<img src="../../assets/images/delivery.gif">
+				<img src="./assets/images/delivery.gif">
 			 </p>
 		  </div>
 		  `;
